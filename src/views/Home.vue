@@ -28,7 +28,6 @@ export default {
 
   .home{
     min-height: calc(100vh - 5rem);
-    background-color: #1f1f1f;
   }
 
   .icon p{
@@ -121,6 +120,7 @@ export default {
     border: 2px solid #00c3ff;
     padding: 0.5rem;
     border-radius: 3px;
+    transition: all 0.3s ease-in-out;
   }
 
   button:hover{

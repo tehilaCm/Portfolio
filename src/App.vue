@@ -2,32 +2,38 @@
   <div id="app">
     <div class="mobile-nav-block">
       <div class="icon">
-        <img src="@/assets/T.png">
+        <router-link to="/"><img src="@/assets/T.png"></router-link> 
       </div>
       <span class="mobile-menu-icon" @click="openMobileNav()"><i class="material-icons">menu</i></span>
+      <div class="github">
+        <a href="https://github.com/tehilaCm" target="_blank"><img src="@/assets/github.png" title="Github"></a>
+      </div>
     </div>
     <div class="mobile-nav">
-      <router-link to="/" title="Home"><i class="material-icons">home</i></router-link> 
-      <router-link to="/" title="About"><i class="material-icons">person</i></router-link> 
-      <router-link to="/" title="Skills"><i class="material-icons">work</i></router-link> 
-      <router-link to="/" title="My work"><i class="material-icons">visibility</i></router-link> 
-      <router-link to="/" title="Contact"><i class="material-icons">email</i></router-link> 
-      <router-link to="/about">About</router-link>
+      <router-link to="/" title="Home"><i class="material-icons" @click="openMobileNav()">home</i></router-link> 
+      <router-link to="/about" title="About"><i class="material-icons" @click="openMobileNav()">person</i></router-link> 
+      <router-link to="/skills" title="Skills"><i class="material-icons" @click="openMobileNav()">work</i></router-link> 
+      <router-link to="/myWork" title="My work"><i class="material-icons" @click="openMobileNav()">visibility</i></router-link> 
+      <router-link to="/contact" title="Contact"><i class="material-icons" @click="openMobileNav()">email</i></router-link> 
     </div>
     <div class="nav">
       <div class="icon">
-        <img src="@/assets/T.png">
+         <router-link to="/"><img src="@/assets/T.png"></router-link> 
       </div>
       <div class="nav-items">
         <router-link to="/" title="Home"><i class="material-icons">home</i></router-link> 
-        <router-link to="/" title="About"><i class="material-icons">person</i></router-link> 
-        <router-link to="/" title="Skills"><i class="material-icons">work</i></router-link> 
-        <router-link to="/" title="My work"><i class="material-icons">visibility</i></router-link> 
-        <router-link to="/" title="Contact"><i class="material-icons">email</i></router-link> 
-        <router-link to="/about">About</router-link>
+        <router-link to="/about" title="About"><i class="material-icons">person</i></router-link> 
+        <router-link to="/skills" title="Skills"><i class="material-icons">work</i></router-link> 
+        <router-link to="/myWork" title="My work"><i class="material-icons">visibility</i></router-link> 
+        <router-link to="/contact" title="Contact"><i class="material-icons">email</i></router-link> 
+      </div>
+      <div class="github">
+        <a href="https://github.com/tehilaCm" target="_blank"><img src="@/assets/github.png" title="Github"></a>
       </div>
     </div>
+    <vue-page-transition name="zoom">
     <router-view />
+    </vue-page-transition>
   </div>
 </template>
 
@@ -44,10 +50,6 @@ export default {
 </script>
 
 <style>
-
-  html{
-    overflow: hidden;
-  }
   
   #app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -55,6 +57,7 @@ export default {
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
+    background-color: #1f1f1f;
   }
 
   .mobile-nav{
@@ -65,7 +68,7 @@ export default {
     background-color: #181818;
     height: 5rem;
     display: none;
-    position: absolute;
+    position: fixed;
     width: 5rem;
     height: 100%;
   }
@@ -93,6 +96,17 @@ export default {
     color: #00c3ff
   }
 
+  .nav .github{
+    margin: 4rem auto auto;
+  }
+
+  .github img{
+    background-color: #969494;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
   .mobile-nav-block{
     height: 5rem;
     background-color: #181818;
@@ -109,6 +123,13 @@ export default {
   .mobile-nav-block .icon img{
     width: 100%;
     height: 100%;
+  }
+
+  .mobile-nav-block .github{
+    position: absolute;
+    z-index: 1;
+    left: 6rem;
+    top: 1.5rem;
   }
 
   .mobile-nav{
