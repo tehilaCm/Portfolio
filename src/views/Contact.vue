@@ -21,9 +21,9 @@
 <script>
 export default {
     name: "Contact",
-     created() {
-        window.scrollTo(0,0);
-    }
+    created() {
+    window.scrollTo(0,0);
+}
 }
 </script>
 
@@ -75,6 +75,7 @@ export default {
         color: #00c3ff;
         font-size: 1.2rem;
         font-weight: bold;
+        transition: all 0.5s ease-in-out;
     }
 
     button:hover{

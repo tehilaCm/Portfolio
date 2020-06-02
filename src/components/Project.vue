@@ -69,11 +69,6 @@ export default {
 
     @media (min-width: 40rem)
     {
-        .project{
-            width: calc(100% - 5rem);
-            margin-left: 5rem;
-        }
-
         .project-image{
             width: 90%;
             max-width: 70rem;

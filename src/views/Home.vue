@@ -1,8 +1,8 @@
 <template>
   <div class="home">
     <div class="icon">
-      <p class="blue-T">T</p>
-      <p class="pink-T">T</p>
+      <p class="blue-T T">T</p>
+      <p class="pink-T T">T</p>
     </div>
     <div class="home-front">
       <div class="discription">
@@ -16,9 +16,11 @@
 </template>
 
 <script>
-
 export default {
-  name: "Home"
+  name: "Home",
+  created() {
+      window.scrollTo(0,0);
+  }
 };
 </script>
 

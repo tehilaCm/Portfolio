@@ -12,8 +12,8 @@
     <div class="mobile-nav">
       <router-link to="/" title="Home"><i class="material-icons" @click="openMobileNav()">home</i></router-link> 
       <router-link to="/about" title="About"><i class="material-icons" @click="openMobileNav()">person</i></router-link> 
-      <router-link to="/skills" title="Skills"><i class="material-icons" @click="openMobileNav()">work</i></router-link> 
-      <router-link to="/myWork" title="My work"><i class="material-icons" @click="openMobileNav()">visibility</i></router-link> 
+      <router-link to="/skills" title="Skills"><i class="material-icons" @click="openMobileNav()">poll</i></router-link> 
+      <router-link to="/myWork" title="My work"><i class="material-icons" @click="openMobileNav()">work</i></router-link> 
       <router-link to="/contact" title="Contact"><i class="material-icons" @click="openMobileNav()">email</i></router-link> 
     </div>
     <div class="nav">
@@ -23,8 +23,8 @@
       <div class="nav-items">
         <router-link to="/" title="Home"><i class="material-icons">home</i></router-link> 
         <router-link to="/about" title="About"><i class="material-icons">person</i></router-link> 
-        <router-link to="/skills" title="Skills"><i class="material-icons">work</i></router-link> 
-        <router-link to="/myWork" title="My work"><i class="material-icons">visibility</i></router-link> 
+        <router-link to="/skills" title="Skills"><i class="material-icons">poll</i></router-link> 
+        <router-link to="/myWork" title="My work"><i class="material-icons">work</i></router-link> 
         <router-link to="/contact" title="Contact"><i class="material-icons">email</i></router-link> 
       </div>
       <div class="github">

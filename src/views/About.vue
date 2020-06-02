@@ -4,6 +4,15 @@
   </div>
 </template>
 
+<script>
+export default {
+  name: "About",
+   created() {
+        window.scrollTo(0,0);
+    }
+}
+</script>
+
 <style scoped>
 
   .about{
