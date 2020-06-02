@@ -11,37 +11,22 @@ import Project from "@/components/Project.vue";
 import firebase from '../firebaseConfig.js'
 
 const database = firebase.database();
-let projects = database.ref("projects");
+let projectsRef = database.ref("projects");
 
 export default {
     name: "MyWork",
     data(){
         return{
-            projects:[
-                // {
-                //     name: "Looking-good",
-                //     link: "https://looking-good-60522.web.app/",
-                //     img: "looking-good",
-                //     title: "A gym in Petah Tiqva.",
-                //     description: "The website contain the different activities the gym has to offer, it's schedual and trainers."
-                // },
-                // {
-                //     name: "Goodies",
-                //     link: "https://goodies-20207.firebaseapp.com/",
-                //     img: "goodies",
-                //     title: "An Italian restaurant.",
-                //     description: "The website contain the restaurant menus and gallery."
-                // }
-            ]
+            projects:[]
         }
     },
     components: {
         Project
     },
-     created() {
+    mounted(){
         window.scrollTo(0,0);
 
-        projects.once("value", projects => {
+        projectsRef.once("value", projects => {
             projects.forEach(item => {
                 this.projects.push({
                 name: item.child("name").val(),

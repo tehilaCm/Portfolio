@@ -18,7 +18,7 @@
 <script>
 export default {
   name: "Home",
-  created() {
+  mounted() {
       window.scrollTo(0,0);
   }
 };
@@ -28,6 +28,8 @@ export default {
 
   .home{
     min-height: calc(100vh - 5rem);
+    overflow: hidden;
+    position: relative;
   }
 
   .icon p{
@@ -41,13 +43,13 @@ export default {
   .blue-T{
     color: #00c3ff;
     right: -3.2rem;
-    top: 4.7rem;
+    top: 0.7rem;
   }
 
   .pink-T{
     color: #f456d5;
     right: -2.2rem;
-    top: 6rem;
+    top: 2rem;
   }
 
   .home-front{

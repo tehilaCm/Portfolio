@@ -69,6 +69,7 @@ export default {
     height: 5rem;
     display: none;
     position: fixed;
+    z-index: 1;
     width: 5rem;
     height: 100%;
   }
