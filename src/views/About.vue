@@ -6,7 +6,7 @@
       <p>I finished at the top of my class with final score of 95.</p>
       <p>My final project is an android native application in java for android, using android studio.</p>
       <p>Building UI for android using android SDK, hosted on firebase.</p>
-      <p>I studied online curses: CSS, fullstack, Vue js framework.</p>
+      <p>I studied online curses: CSS, fullstack - Vue js framework.</p>
     </div>
     <div class="code">
       <img src="@/assets/coding3.png" class="rotating">
@@ -46,7 +46,7 @@ export default {
   p{
     color: white;
     font-size: 1.2rem;
-    padding: 0.5rem;
+    padding: 0.5rem 1rem;
   }
 
   .code{
@@ -54,7 +54,7 @@ export default {
     margin-bottom: 3rem;
   }
 
-  @-webkit-keyframes rotating {
+  @keyframes rotating {
     from{
         -webkit-transform: rotate(0deg);
     }
@@ -64,7 +64,7 @@ export default {
   }
 
   .rotating {
-      -webkit-animation: rotating 8s linear infinite;
+      animation: rotating 8s linear infinite;
       width: 13rem;
   }
 
@@ -77,7 +77,7 @@ export default {
     }
 
     h1{
-          font-size: 3rem;
+        font-size: 3rem;
     }
 
     .code{
@@ -87,6 +87,19 @@ export default {
     .rotating{
       width: 16rem;
     }
+
+    @media(min-width: 95rem)
+    {
+      h1{
+        padding-top: 5rem;
+        font-size: 4rem;
+      }
+
+      p{
+        font-size: 1.5rem;
+      }
+    }
+
   }
 
 </style>

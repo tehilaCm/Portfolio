@@ -11,7 +11,7 @@
         <p>front end developer.</p>
       </div>
     </div>
-    <button>Resume</button>
+    <a href="https://drive.google.com/file/d/1PAThueFvMhlZI0WHNwXz9v8dgfCUm9S5/view?usp=sharing" target="_blank">Resume</a>
   </div>
 </template>
 
@@ -20,6 +20,12 @@ export default {
   name: "Home",
   mounted() {
       window.scrollTo(0,0);
+  },
+  methods: {
+    getPDFPath: function() {
+      var files = require.context('@/assets/', false)
+      return files('./resume.pdf')
+    }
   }
 };
 </script>
@@ -111,12 +117,13 @@ export default {
     }
   }
 
-   button{
+   a{
     cursor: pointer;
     position: absolute;
     z-index: 1;
     left: 2rem;
     font-size: 1.5rem;
+    text-decoration: none;
     color: #00c3ff;
     background-color: transparent;
     border: 2px solid #00c3ff;
@@ -125,7 +132,7 @@ export default {
     transition: all 0.3s ease-in-out;
   }
 
-  button:hover{
+  a:hover{
     color: #f456d5;
     background-color: transparent;
     border: 2px solid #f456d5;
@@ -170,11 +177,57 @@ export default {
       font-size: 4rem;
     }
 
-    button{
+    a{
       top: 27rem;
       left: 11rem;
       font-size: 1.7rem;
     }
   }
 
+  @media(min-width: 95rem)
+  {
+    .icon p{
+      font-size: 50rem;
+      margin-right: 10%;
+    }
+
+    .pink-T{
+      top: 5rem;
+    }
+
+    .blue-T{
+      top: 3rem;
+    }
+
+    .discription{
+      padding-top: 13rem;
+    }
+
+    a{
+      top: 35rem;
+    }
+  }
+
+  @media(min-width: 110rem)
+  {
+    .icon p{
+      font-size: 60rem;
+    }
+
+    .pink-T{
+      top: -0.2rem;
+    }
+
+    .blue-T{
+      top: -3rem;
+    }
+
+    .discription p{
+      font-size: 5rem;
+    }
+
+    a{
+      top: 39rem;
+    }
+  }
 </style>

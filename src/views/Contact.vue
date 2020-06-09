@@ -197,4 +197,16 @@ export default {
         }
     }
 
+    @media(min-width: 95rem)
+    {
+      h1{
+        padding-top: 5rem;
+        font-size: 4rem;
+      }
+
+      .get-in-touch{
+        font-size: 1.5rem;
+      }
+    }
+
 </style>

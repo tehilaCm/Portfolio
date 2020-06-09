@@ -31,6 +31,9 @@
         <a href="https://github.com/tehilaCm" target="_blank"><img src="@/assets/github.png" title="Github"></a>
       </div>
     </div>
+    <div class="scroll-up" onClick="window.scroll({ top: 0,left: 0,behavior: 'smooth' });">
+      ^  
+    </div>
     <vue-page-transition name="zoom">
     <router-view />
     </vue-page-transition>
@@ -47,6 +50,18 @@ export default {
       }
   }
 }
+
+//scroll-up
+let $ = require('jquery');
+window.addEventListener("scroll",function(){
+  if(window.pageYOffset > 600){
+      $( ".scroll-up" ).show( "slow" );
+  }
+  else if(window.pageYOffset < 500){
+       $( ".scroll-up" ).hide( "slow" );
+  }
+},false);
+
 </script>
 
 <style>
@@ -170,6 +185,24 @@ export default {
     margin: 1rem;
   }
 
+  .scroll-up {
+    width: 2.5rem;
+    height: 2.5rem;
+    color: #00c3ff;
+    position: fixed;
+    bottom: 7rem;
+    right: 2rem;
+    z-index: 5;
+    border: 3px solid #00c3ff;
+    background-color: transparent;
+    border-radius: 50%;
+    padding: 0.3rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+    display: none;
+    cursor: pointer;
+  }
+
   @media (min-width: 40rem)
   {
     .mobile-menu-icon{
@@ -188,6 +221,24 @@ export default {
     .nav{
       display: block;
     }
+
+    .github{
+      position: absolute;
+      left: 1.3rem;
+      bottom: 1rem;
+    }
+
+    .scroll-up {
+      bottom: 6rem;
+      right: 3rem;
+    }
   }
+
+    @media(min-width: 95rem)
+    {
+      .nav-items{
+        margin-top: 10rem;
+      }
+    }
   
 </style>

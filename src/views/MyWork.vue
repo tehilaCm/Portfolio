@@ -65,4 +65,12 @@ export default {
             font-size: 3rem;
         }
     }
+
+    @media(min-width: 95rem)
+    {
+      h1{
+        padding-top: 5rem;
+        font-size: 4rem;
+      }
+    }
 </style>
