@@ -44,19 +44,44 @@ export default {
     font-size: 28rem;
     transform: rotate(340deg);
     font-family: sans-serif;
+    animation-fill-mode: both;
   }
 
   .blue-T{
-    color: #00c3ff;
+    color: transparent; 
+    text-shadow: 2px 0 0 #00c3ff, -2px 0 0 #00c3ff, 0 2px 0 #00c3ff, 0 -2px 0 #00c3ff, 1px 1px #00c3ff, -1px -1px 0 #00c3ff, 1px -1px 0 #00c3ff, -1px 1px 0 #00c3ff;
     right: -3.2rem;
     top: 0.7rem;
+    animation: 3s ease-out 2s 1 fadeInBlue;
   }
 
   .pink-T{
-    color: #f456d5;
+    color: transparent; 
+    text-shadow: 2px 0 0 #f456d5, -2px 0 0 #f456d5, 0 2px 0 #f456d5, 0 -2px 0 #f456d5, 1px 1px #f456d5, -1px -1px 0 #f456d5, 1px -1px 0 #f456d5, -1px 1px 0 #f456d5;
     right: -2.2rem;
     top: 2rem;
+    animation: 3s ease-out 2s 1 fadeInPink;
   }
+
+   @keyframes fadeInBlue {
+       0% {
+        color: #1f1f1f;
+      }
+      100% {
+        color: #00c3ff;
+        text-shadow: none;
+      }
+    }
+
+    @keyframes fadeInPink {
+      0% {
+        color: #1f1f1f;
+      }
+      100% {
+        color: #f456d5;
+        text-shadow: none;
+      }
+    }
 
   .home-front{
     position: relative;
