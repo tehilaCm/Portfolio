@@ -3,6 +3,13 @@
         <h1>My work</h1>
         <Project v-for="(project, index) in projects" :title="project.title" :description="project.description" :link="project.link" :name="project.name" :img="project.img" :key.sync="index">
         </Project>
+        <div class="project">
+            <h1 class="bulls-eye-header">Bull's eye</h1>
+            <p>An android native application</p>
+            <p>I wanted to share with you my final project, so I added some snapshots. This is an online sunglasses shop that gives it's costumers the chance to see the way the sunglasses will look at them befor buying it. In each sunglasses details you will find the \"How does it look\" button that display the sunglass on the customer face using live camera.</p>
+            <img src="@/assets/bulls-eye.png" class="project-image">
+            <a href="https://bulls-eye-web.web.app/" target="_blank">View project</a>
+        </div>
     </div>
 </template>
 
@@ -39,6 +46,8 @@ export default {
         });
     }
 }
+
+
 </script>
 
 <style scoped>
@@ -53,6 +62,49 @@ export default {
         min-height: calc(100vh - 5rem);
     }
 
+    .project{
+        width: fit-content;
+        margin: auto;
+        padding: 2rem 0 2rem 0;
+    }
+
+    .bulls-eye-header{
+        color: #f456d5;
+        font-size: 2.5rem;
+        margin: 1rem auto;
+    }
+
+    p{
+        color: white;
+        font-size: 1.4rem;
+        margin: auto auto 1rem auto;
+        max-width: 40rem;
+        padding: 0 0.5rem;
+    }
+
+    .project-image{
+        width: 50%;
+        margin: auto;
+        margin-top: 1rem;
+    }
+
+    a{
+        color: #00c3ff;
+        text-decoration: none;
+        width: 15rem;
+        display: block;
+        font-weight: bold;
+        padding: 0.5rem;
+        margin: 2rem auto 0 auto;
+        border: 2px solid #00c3ff;
+        transition: all 0.5s ease-in-out;
+    }
+
+     a:hover{
+        color: white;
+        background-color: #00c3ff;
+    }
+
     @media (min-width: 40rem)
     {
         .my-work{
@@ -63,6 +115,18 @@ export default {
 
         h1{
             font-size: 3rem;
+        }
+
+          .project-image{
+            max-width: 70rem;
+        }
+
+        a{
+            font-size: 1.2rem;
+        }
+
+        p{
+            padding: 0 1rem;
         }
     }
 
