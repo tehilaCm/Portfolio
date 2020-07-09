@@ -1,20 +1,23 @@
 <template>
     <div class="my-work">
         <h1>My work</h1>
-        <Project v-for="(project, index) in projects" :title="project.title" :description="project.description" :link="project.link" :name="project.name" :img="project.img" :key.sync="index">
+        <img src="lap2.png" alt="">
+        <img src="goodies.png" alt="">
+        <!-- <Project v-for="(project, index) in projects" :title="project.title" :description="project.description" :link="project.link" :name="project.name" :img="project.img" :key.sync="index">
         </Project>
         <div class="project">
             <h1 class="bulls-eye-header">Bull's eye</h1>
             <p>An android native application</p>
-            <p>I wanted to share with you my final project, so I added some snapshots. This is an online sunglasses shop that gives it's costumers the chance to see the way the sunglasses will look at them befor buying it. In each sunglasses details you will find the \"How does it look\" button that display the sunglass on the customer face using live camera.</p>
+            <p>I wanted to share with you my final project from collage, so I added some snapshots. This is an online sunglasses shop that gives it's costumers the chance to see the way the sunglasses will look at them befor buying it. In each sunglasses details you will find the "How does it look" button that display the sunglass on the customer face using live camera.</p>
             <img src="@/assets/bulls-eye.png" class="project-image">
             <a href="https://bulls-eye-web.web.app/" target="_blank">View project</a>
-        </div>
+        </div> -->
+        
     </div>
 </template>
 
 <script>
-import Project from "@/components/Project.vue";
+// import Project from "@/components/Project.vue";
 import firebase from '../firebaseConfig.js'
 
 const database = firebase.database();
@@ -28,7 +31,7 @@ export default {
         }
     },
     components: {
-        Project
+        // Project
     },
     mounted(){
         window.scrollTo(0,0);
