@@ -8,10 +8,10 @@
       <div class="discription">
         <p>Hi,</p>
         <p>I'm Tehila,</p>
-        <p>software developer.</p>
+        <p>Full Stack Developer</p>
       </div>
     </div>
-    <a href="https://drive.google.com/file/d/1y_b6iITI7f0QUdUfCdi76I40LXDBQU_6/view?usp=sharing" target="_blank">Resume</a>
+    <a href="https://drive.google.com/file/d/1OqSFuXftoDot080S27IUpOAk0X4e_913/view?usp=sharing" target="_blank">Resume</a>
   </div>
 </template>
 

@@ -7,6 +7,8 @@
       <p>My final project is an android native application in java for android, using android studio.</p>
       <p>Building UI for android using android SDK, hosted on firebase.</p>
       <p>I studied online courses: CSS, fullstack - Vue js framework.</p>
+      <p>I'm currently working at Leader as a fullstack developer.</p>
+      <p>I develop in React and Node js</p>
     </div>
     <div class="code">
       <img src="@/assets/coding3.png" class="rotating">

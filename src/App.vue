@@ -73,6 +73,7 @@ window.addEventListener("scroll",function(){
     text-align: center;
     color: #2c3e50;
     background-color: #1f1f1f;
+    overflow-x: hidden;
   }
 
   .mobile-nav{

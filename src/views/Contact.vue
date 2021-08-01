@@ -115,7 +115,9 @@ export default {
     }
 
     .contact-form{
-        padding: 1rem 0;
+        padding: 1rem 0.5rem;
+        max-width: 19rem;
+        margin: auto;
     }
 
     input, textarea, .send{
@@ -128,7 +130,7 @@ export default {
         font-size: 1rem;
         margin: 1.5rem auto;
         padding: 0.7rem;
-        width: 18rem;
+        width: 100%;
         opacity: 0;
         animation: 1s ease-out 1s 1 slideIn;
         animation-fill-mode: both;
@@ -143,7 +145,6 @@ export default {
             opacity: 1;
         }
     }
-
 
     textarea{
         resize: none;
@@ -191,7 +192,11 @@ export default {
             margin: auto;
         }
 
-        input, textarea, button{
+        .contact-form{
+            max-width: 30rem;
+        }
+
+        input, textarea, .send{
             font-size: 1.2rem;
             width: 25rem;
         }
